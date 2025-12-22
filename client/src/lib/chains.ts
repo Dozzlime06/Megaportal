@@ -10,11 +10,11 @@ export const megaethMainnet = defineChain({
   },
   rpcUrls: {
     default: {
-      http: ['https://rpc-secret-mega.poptyedev.com/'],
+      http: ['https://mainnet.megaeth.com/rpc'],
     },
   },
   blockExplorers: {
-    default: { name: 'MEGA Explorer', url: 'https://mega-explorer-leaked.poptyedev.com/' },
+    default: { name: 'MegaETH Explorer', url: 'https://megaeth.blockscout.com/' },
   },
 });
 
