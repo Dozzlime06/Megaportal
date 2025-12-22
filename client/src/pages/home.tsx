@@ -286,12 +286,6 @@ export default function Home() {
                 </motion.div>
               )}
 
-              {isBridgeIn && selectedChain.id === 8453 && (
-                <div className="bg-neutral-50 rounded-xl p-3 text-xs border border-neutral-100">
-                  <div className="flex justify-between mb-1.5"><span className="text-neutral-500">Direct deposit (Base chain only):</span><button onClick={copyContract} className="text-neutral-700 hover:text-neutral-900 cursor-pointer flex items-center gap-1 transition-colors" data-testid="button-copy-contract">{copied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}{copied ? "Copied" : "Copy"}</button></div>
-                  <code className="text-[10px] text-neutral-400 break-all">{selectedChain.bridgeContract}</code>
-                </div>
-              )}
             </div>
 
             <div className="bg-neutral-900 px-4 py-2 flex justify-between text-xs text-neutral-400">
