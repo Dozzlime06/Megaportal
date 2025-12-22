@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown, Wallet, ExternalLink, Activity, Clock, Copy, Check, ChevronDown, X, Zap, BookOpen } from "lucide-react";
+import { ArrowUpDown, Wallet, ExternalLink, Activity, Clock, Copy, Check, ChevronDown, X, Zap, BookOpen } from "lucide-react";
 const megaPortalLogo = "/logo.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -226,7 +226,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex justify-center -my-0.5 relative z-10">
+              <div className="flex justify-center my-1 relative z-10">
                 <motion.button 
                   whileHover={{ scale: 1.1, rotate: 180 }}
                   whileTap={{ scale: 0.95 }}
@@ -234,7 +234,7 @@ export default function Home() {
                   className="w-10 h-10 rounded-full bg-neutral-900 hover:bg-neutral-800 flex items-center justify-center cursor-pointer shadow-lg" 
                   data-testid="button-switch-direction"
                 >
-                  <ArrowDown className="w-4 h-4 text-white" strokeWidth={3} />
+                  <ArrowUpDown className="w-4 h-4 text-white" strokeWidth={2.5} />
                 </motion.button>
               </div>
 
