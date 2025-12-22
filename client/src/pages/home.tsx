@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDown, Wallet, ExternalLink, Activity, Clock, Copy, Check, ChevronDown, X, Zap, BookOpen } from "lucide-react";
-import megaPortalLogo from "@assets/generated_images/portal_logo_dirty_white_bg.png";
+const megaPortalLogo = "/logo.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ChainLogo, MegaETHLogoSimple } from "@/components/chain-logos";
