@@ -9,10 +9,10 @@ const megaethChain = {
   name: "MEGA Mainnet",
   nativeCurrency: { name: "Ethereum", symbol: "ETH", decimals: 18 },
   rpcUrls: {
-    default: { http: ["https://rpc-secret-mega.poptyedev.com/"] },
+    default: { http: ["https://mainnet.megaeth.com/rpc"] },
   },
   blockExplorers: {
-    default: { name: "MEGA Explorer", url: "https://mega-explorer-leaked.poptyedev.com/" },
+    default: { name: "MEGA Explorer", url: "https://megaeth.blockscout.com/" },
   },
 };
 
