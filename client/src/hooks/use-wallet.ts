@@ -149,8 +149,8 @@ export function useWallet() {
             chainId: '0x10E6',
             chainName: 'MEGA Mainnet',
             nativeCurrency: { name: 'Ethereum', symbol: 'ETH', decimals: 18 },
-            rpcUrls: ['https://rpc-secret-mega.poptyedev.com/'],
-            blockExplorerUrls: ['https://mega-explorer-leaked.poptyedev.com/'],
+            rpcUrls: ['https://mainnet.megaeth.com/rpc'],
+            blockExplorerUrls: ['https://megaeth.blockscout.com/'],
           }],
         });
       }
@@ -170,8 +170,8 @@ export function useWallet() {
           chainId: '0x10E6',
           chainName: 'MEGA Mainnet',
           nativeCurrency: { name: 'Ethereum', symbol: 'ETH', decimals: 18 },
-          rpcUrls: ['https://rpc-secret-mega.poptyedev.com/'],
-          blockExplorerUrls: ['https://mega-explorer-leaked.poptyedev.com/'],
+          rpcUrls: ['https://mainnet.megaeth.com/rpc'],
+          blockExplorerUrls: ['https://megaeth.blockscout.com/'],
         }],
       });
     } catch (err: any) {
