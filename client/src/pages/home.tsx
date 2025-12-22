@@ -282,7 +282,7 @@ export default function Home() {
                 >
                   <div className="flex items-center gap-2 text-white font-semibold text-sm mb-0.5"><Check className="w-4 h-4" />Success!</div>
                   <p className="text-xs text-neutral-400">Your assets are being bridged.</p>
-                  {txHash && <a href={isBridgeIn ? `https://basescan.org/tx/${txHash}` : `https://mega-explorer-leaked.poptyedev.com/tx/${txHash}`} target="_blank" className="text-neutral-300 text-xs hover:underline flex items-center gap-1 mt-1.5">View Transaction <ExternalLink className="w-3 h-3" /></a>}
+                  {txHash && <a href={isBridgeIn ? `https://basescan.org/tx/${txHash}` : `https://megaeth.blockscout.com/tx/${txHash}`} target="_blank" className="text-neutral-300 text-xs hover:underline flex items-center gap-1 mt-1.5">View Transaction <ExternalLink className="w-3 h-3" /></a>}
                 </motion.div>
               )}
 
