@@ -1,0 +1,64 @@
+import { Octokit } from '@octokit/rest';
+import * as fs from 'fs';
+
+let connectionSettings: any;
+
+async function getAccessToken() {
+  const hostname = process.env.REPLIT_CONNECTORS_HOSTNAME;
+  const xReplitToken = process.env.REPL_IDENTITY 
+    ? 'repl ' + process.env.REPL_IDENTITY 
+    : process.env.WEB_REPL_RENEWAL 
+    ? 'depl ' + process.env.WEB_REPL_RENEWAL 
+    : null;
+  if (!xReplitToken) throw new Error('X_REPLIT_TOKEN not found');
+  connectionSettings = await fetch(
+    'https://' + hostname + '/api/v2/connection?include_secrets=true&connector_names=github',
+    { headers: { 'Accept': 'application/json', 'X_REPLIT_TOKEN': xReplitToken } }
+  ).then(res => res.json()).then(data => data.items?.[0]);
+  return connectionSettings?.settings?.access_token || connectionSettings.settings?.oauth?.credentials?.access_token;
+}
+
+async function main() {
+  const accessToken = await getAccessToken();
+  const octokit = new Octokit({ auth: accessToken });
+  const { data: user } = await octokit.users.getAuthenticated();
+  console.log('Authenticated as:', user.login);
+  
+  // Update a trigger file to force new commit
+  const timestamp = new Date().toISOString();
+  const content = `# Build trigger\nLast updated: ${timestamp}\n`;
+  const base64Content = Buffer.from(content).toString('base64');
+  
+  let sha: string | undefined;
+  try {
+    const { data } = await octokit.repos.getContent({
+      owner: user.login,
+      repo: 'Megaportal',
+      path: '.build-trigger'
+    });
+    if ('sha' in data) sha = data.sha;
+  } catch (e) {}
+  
+  await octokit.repos.createOrUpdateFileContents({
+    owner: user.login,
+    repo: 'Megaportal',
+    path: '.build-trigger',
+    message: 'Force rebuild - fix logo path',
+    content: base64Content,
+    sha
+  });
+  
+  console.log('Created new commit with timestamp:', timestamp);
+  
+  // Get latest commit
+  const { data: commits } = await octokit.repos.listCommits({
+    owner: user.login,
+    repo: 'Megaportal',
+    per_page: 1
+  });
+  
+  console.log('Latest commit:', commits[0].sha);
+  console.log('Message:', commits[0].commit.message);
+}
+
+main().catch(console.error);
