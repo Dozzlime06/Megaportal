@@ -195,12 +195,11 @@ npm run dev
   
   console.log(`Creating tree with ${treeEntries.length} entries...`);
   
-  // Create tree
+  // Create tree (without base_tree to do complete replacement)
   const { data: tree } = await octokit.git.createTree({
     owner,
     repo,
-    tree: treeEntries,
-    base_tree: baseSha
+    tree: treeEntries
   });
   
   console.log('Tree created:', tree.sha);
