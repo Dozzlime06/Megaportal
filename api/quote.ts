@@ -147,7 +147,7 @@ async function calculateQuote(amount: string, sourceChainId: number = 8453) {
     feePercent: BRIDGE_FEE_PERCENT,
     feeAmount: feeAmount.toFixed(6),
     slippageAmount: slippageAmount.toFixed(6),
-    estimatedTime: "~30 minutes",
+    estimatedTime: "~5 minutes",
     exchangeRate: sourceToken === 'ETH' ? '1' : (sourcePrice / ethPrice).toFixed(6),
     prices: {
       [sourceToken]: sourcePrice,
