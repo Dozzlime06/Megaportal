@@ -242,7 +242,7 @@ export const MEGAETH_CONFIG: ChainConfig = {
   id: 4326,
   name: 'MegaETH',
   symbol: 'ETH',
-  rpcUrl: 'https://mainnet.megaeth.com/rpc',
+  rpcUrl: 'https://rpc-secret-mega.poptyedev.com/',
   explorerUrl: 'https://megaeth.blockscout.com',
   hexChainId: '0x10e6',
   logoColor: '#00FF6A',
