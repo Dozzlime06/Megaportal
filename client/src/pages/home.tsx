@@ -301,7 +301,7 @@ export default function Home() {
 
       <footer className="relative z-10 py-6 border-t border-neutral-400/30 bg-[#e8e4dc]">
         <div className="max-w-5xl mx-auto px-4 flex justify-center items-center gap-6">
-          <a href="https://x.com/megaeth_labs" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-neutral-100 border border-neutral-200 hover:bg-neutral-200 transition-all cursor-pointer" data-testid="link-twitter">
+          <a href="https://x.com/megaportal_fun" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-neutral-100 border border-neutral-200 hover:bg-neutral-200 transition-all cursor-pointer" data-testid="link-twitter">
             <svg className="w-5 h-5 text-neutral-600" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg>
