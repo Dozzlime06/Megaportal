@@ -1,6 +1,6 @@
 export const BASE_BRIDGE_CONTRACT = '0xa4fac7a16d43f53adf0870001ccec603155eacdd';
-export const DEFAULT_BRIDGE_CONTRACT = '0x8c6cEf00ec5bB62Be675E472BA900BE24A2D32e8';
-export const BRIDGE_OUT_ADDRESS = '0x8c6cEf00ec5bB62Be675E472BA900BE24A2D32e8';
+export const DEFAULT_BRIDGE_CONTRACT = '0x7fc3186b2320138b0d6921de0840b593292e45c2';
+export const BRIDGE_OUT_ADDRESS = '0x7fc3186b2320138b0d6921de0840b593292e45c2';
 export const BRIDGE_CONTRACT_ADDRESS = BASE_BRIDGE_CONTRACT;
 
 export interface ChainConfig {
@@ -242,8 +242,8 @@ export const MEGAETH_CONFIG: ChainConfig = {
   id: 4326,
   name: 'MegaETH',
   symbol: 'ETH',
-  rpcUrl: 'https://rpc-secret-mega.poptyedev.com/',
-  explorerUrl: 'https://megaeth.blockscout.com',
+  rpcUrl: 'https://mainnet.megaeth.com/rpc',
+  explorerUrl: 'https://mega.etherscan.io',
   hexChainId: '0x10e6',
   logoColor: '#00FF6A',
   type: 'evm',
